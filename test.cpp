@@ -31,6 +31,7 @@ main() {
 
   HardToFollow(q, trouble[0], &trouble[2]);
   Unknown(&trouble[0], *q);
-
+  cout << "hah"
+       << "\n";
   cout << *q << " " << trouble[0] << " " << trouble[2];
 }
