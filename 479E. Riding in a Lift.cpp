@@ -14,8 +14,6 @@ int main(int argc, char const *argv[]) {
   }
   if (abs(a - b) == 1) {
     cout << 0 << "\n";
-    cout << "aa"
-         << "\n";
     return;
   }
   dp[a] = 1;

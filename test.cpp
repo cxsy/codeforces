@@ -1,37 +1,47 @@
 #include <bits/stdc++.h>
 using namespace std;
+// #define what_is(x) cout << #x << " is " << x << "\n";
+// #define rep(i, begin, end)                            \
+//   for (__typeof(end) i = (begin) - ((begin) > (end)); \
+//        i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
 
-void Unknown(int *p, int num);
-void HardToFollow(int *p, int q, int *num);
+// template <typename T>
+// T _max(T a) {
+//   return a;
+// }
+// #define eb emplace_back
+// #define mt make_tuple
+// template <typename T, typename... Args>
+// T _max(T a, Args... args) {
+//   return max(a, _max(args...));
+// }
+// int sum() { return 0; }
 
-void Unknown(int *p, int num) {
-  int *q;
-
-  q = &num;
-  *p = *q + 2;
-  num = 7;
-}
-
-void HardToFollow(int *p, int q, int *num) {
-  *p = q + *num;
-  *num = q;
-  num = p;
-  p = &q;
-  Unknown(num, *p);
-}
-
-main() {
-  int *q;
-  int trouble[3];
-
-  trouble[0] = 1;
-  q = &trouble[1];
-  *q = 2;
-  trouble[2] = 3;
-
-  HardToFollow(q, trouble[0], &trouble[2]);
-  Unknown(&trouble[0], *q);
-  cout << "hah"
-       << "\n";
-  cout << *q << " " << trouble[0] << " " << trouble[2];
+// template <typename T, typename... Args>
+// T sum(T a, Args... args) {
+//   return a + sum(args...);
+// }
+// long long operator"" _km(unsigned long long literal) { return literal * 1000;
+// }
+int main(int argc, char const *argv[]) {
+  // vector<int> v{7, 2, 3, 5};
+  // vector<int> n;
+  // for (int a : v) {
+  //   n.eb(a + 1);
+  // }
+  // v = move(n);
+  // rep(it, v.begin(), v.end()) cout << *it << " ";
+  // rep(it, n.begin(), n.end()) cout << *it << " ";
+  // cout << R"(Hello\tWorld\n)"
+  //      << "\n";
+  // regex email_pattern(R"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)");
+  // string valid_email("swift@codeforces.com");
+  // if (regex_match(valid_email, email_pattern))
+  //   cout << valid_email << " is valid\n";
+  // else
+  //   cout << valid_email << " is invalid\n";
+  // cout << 120_km << "meters \n";
+  // tuple<int, int> t{1, 2};
+  queue<int> que({1, 2, 3});
+  cout << que.back() << "\n"[1];
 }
