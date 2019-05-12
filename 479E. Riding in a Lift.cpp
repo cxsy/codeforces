@@ -2,7 +2,7 @@
 using namespace std;
 
 const int NMAX = 5005;
-const int mod = 1000000009;
+const int mod = int(1e9) + 7;
 int dp[NMAX];
 
 int main(int argc, char const *argv[]) {
