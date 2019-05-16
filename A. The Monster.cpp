@@ -22,6 +22,7 @@ int main(int argc, char const *argv[]) {
         counter--;
         score++;
       }
+      
       if ((j - i) % 2 && counter >= score) ans++;
     }
   }
