@@ -6,8 +6,7 @@ int gp;
 bool test(double t) {
   double onbus = (l - v1 * t) / (v2 - v1);
   if (onbus <= 0.0) return true;
-  double gap = onbus * (v2 - v1);
-  double re = gap / (v2 + v1);
+  double re = (l - v1 * t) / (v2 + v1);
   return onbus * gp + re * (gp - 1) <= t;
 }
 void build() {
