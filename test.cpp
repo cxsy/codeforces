@@ -42,6 +42,5 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  queue<int> que({1, 2, 3});
-  cout << que.back() << "\n"[1];
+  cout << floor(0.51) << "\n";
 }
