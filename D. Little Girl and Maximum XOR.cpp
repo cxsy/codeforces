@@ -4,13 +4,11 @@ using namespace std;
 ll l, r;
 void solve() {
   cin >> l >> r;
-  int i = 0;
-  for (int i = 62; i >=0; i--) {
-    if (((1ll << i) & l) == ((1ll << i) & r)) continue;
-    cout << (1ll << (i + 1)) - 1 << "\n";
-    exit(0);
-  }
-  cout << "0\n";
+  bitset<63> b1(l);
+  bitset<63> b2(r);
+  int i = 62;
+  while (i >= 0 && b1[i] == b2[i]) i--;
+  cout << (1ll << (i + 1)) - 1 << "\n";
 }
 int main(int argc, char const *argv[]) {
   ios_base::sync_with_stdio(false);

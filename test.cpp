@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ii pair<int, int>
 // #define what_is(x) cout << #x << " is " << x << "\n";
 // #define rep(i, begin, end)                            \
 //   for (__typeof(end) i = (begin) - ((begin) > (end)); \
@@ -42,5 +43,9 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  cout << floor(0.51) << "\n";
+  priority_queue<ii> pq;
+  pq.push(make_pair(1, 2));
+  set<ii> s;
+  s.insert(make_pair(1, 2));
+  cout << s.count({1, 2});
 }
