@@ -43,9 +43,8 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  priority_queue<ii> pq;
-  pq.push(make_pair(1, 2));
-  set<ii> s;
-  s.insert(make_pair(1, 2));
-  cout << s.count({1, 2});
+  pair<int, int> p1{1, 2};
+  pair<int, int> p2 = p1;
+  p2.first = 3;
+  cout << p1.first << "\n";
 }
