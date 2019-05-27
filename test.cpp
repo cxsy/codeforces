@@ -43,8 +43,7 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  pair<int, int> p1{1, 2};
-  pair<int, int> p2 = p1;
-  p2.first = 3;
-  cout << p1.first << "\n";
+  ii arr[4]{{1, 2}, {2, 0}, {3, 0}, {4, 0}};
+  int i = lower_bound(arr, arr + 4, ii{3, -1}) - arr;
+  cout << i << "\n";
 }
