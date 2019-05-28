@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 5005;
-int dp[N][N], cnt[N], sorted[N];  // the number of continuous ones in the right
+int dp[N][N], cnt[N];  // the number of continuous ones in the right
 char r[N];
 int n, m;
 void count_sort(int arr[]) {
@@ -9,14 +9,10 @@ void count_sort(int arr[]) {
   for (int i = 0; i < n; i++) {
     cnt[arr[i]]++;
   }
-  for (int c = 1; c <= m; c++) {
-    cnt[c] += cnt[c - 1];
-  }
-  for (int i = 0; i < n; i++) {
-    sorted[--cnt[arr[i]]] = arr[i];
-  }
-  for (int i = 0; i < n; i++) {
-    arr[i] = sorted[i];
+  for (int c = 0, i = 0; c <= m; c++) {
+    for (int t = 0; t < cnt[c]; t++) {
+      arr[i++] = c;
+    }
   }
 }
 void solve() {
