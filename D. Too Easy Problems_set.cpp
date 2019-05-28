@@ -6,8 +6,8 @@ struct node {
 } A[N], C[N];
 int n, T;
 bool comp1(const node &x, const node &y) { return x.a > y.a; }
-bool comp2(const node &x, const node &y) { return x.t != y.t ? x.t > y.t : x.i > y.i; }
-set<node, decltype(&comp2)> ss(&comp2);
+bool comp2(const node &x, const node &y) { return x.t > y.t; }
+multiset<node, decltype(&comp2)> ss(&comp2);
 void solve() {
   cin >> n >> T;
   int a, t;
