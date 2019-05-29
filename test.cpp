@@ -43,7 +43,7 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  ii arr[4]{{1, 2}, {2, 0}, {3, 0}, {4, 0}};
-  int i = lower_bound(arr, arr + 4, ii{3, -1}) - arr;
-  cout << i << "\n";
+  set<int> s;
+  auto it = prev(s.begin());
+  cout << (it == s.end()) << "\n";
 }
