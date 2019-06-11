@@ -43,7 +43,5 @@ int main(int argc, char const *argv[]) {
   //   cout << valid_email << " is invalid\n";
   // cout << 120_km << "meters \n";
   // tuple<int, int> t{1, 2};
-  set<int> s;
-  auto it = prev(s.begin());
-  cout << (it == s.end()) << "\n";
+  cout << stoul("0xA", nullptr, 16) << "\n";
 }
